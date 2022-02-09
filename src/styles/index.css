@@ -11,7 +11,12 @@
 
 */
 body {
-    background-color: #303030;
+    background-color: #E0DECF ;
+}
+
+img {
+    width: 840px;
+    height: 840px;
 }
 
 .number {

@@ -10,3 +10,24 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body {
+    background-color: #303030;
+}
+
+.number {
+    font-family: 'PT Mono', monospace;
+    display: flex;
+
+}
+
+h6 {
+    font-family: 'STIX Two Text', serif;
+    color: #868885;
+}
+
+.digit {
+    padding: 5px;
+    margin: 2px;
+    color: #868885;
+    background-color: #0C0904;
+}

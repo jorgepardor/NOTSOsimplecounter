@@ -1,22 +1,26 @@
-
-/* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
-body {
-    background-color: #E0DECF ;
+body, html {
+    background-color: #E0DECF;
+}
+ 
+.main{
+    width: 100%;
+    height: 100%;
 }
 
-img {
-    width: 840px;
-    height: 840px;
+.wrap{
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #868885;
+    height: 60vh;
+    width: 40vh;
+    margin: auto;
+    background-color: #E0DECF;
+    box-shadow: 17px 17px 27px 1px rgba(0,0,0,0.2),-17px -17px 27px 1px rgba(255,255,255,0.2);
+
+}
+.radialSpeaker {
+    width: 400px;
+    height: 400px;
 }
 
 .number {
@@ -25,14 +29,39 @@ img {
 
 }
 
-h6 {
+h5, h4, h3, h6, h1, p {
     font-family: 'STIX Two Text', serif;
     color: #868885;
 }
 
 .digit {
-    padding: 5px;
-    margin: 2px;
+    /* padding: 5px;
+    margin: 2px; */
     color: #868885;
     background-color: #0C0904;
+    width: 48px;
+    height: 64px;
+    text-align: center;
+    font-size: 2.4em;
+    border-radius: 8px;
 }
+
+.seconds {
+    display: inline-block;
+}
+
+.btn {
+    height: 64px;
+    width: 64px;
+    box-shadow: 21px 21px 16px -16px rgba(0,0,0,0.2);
+}
+
+.btn-warning {
+    border-radius: 100%;
+    
+}
+
+.btn-danger {
+    border-radius: 100%;
+}
+

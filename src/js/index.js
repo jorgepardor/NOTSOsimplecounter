@@ -7,6 +7,7 @@ import "../styles/index.css";
 
 //import your own components
 import Home from "./component/home.jsx";
+import Buttons from "./component/buttons.jsx";
 // import Counter from "./component/Counter.jsx"
 
 //render your react application
@@ -29,3 +30,5 @@ setInterval(function () {
 		document.querySelector("#app")
 	);
 }, 1000);
+
+ReactDOM.render(<Buttons />, document.querySelector("#buttons"));

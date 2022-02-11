@@ -1,9 +1,14 @@
-body, html {
-    background-color: #E0DECF;
+body {
+    /* background-color: #E0DECF; */
+    background: url(../img/metalbg.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
  
 .main{
-    width: 100%;
+    background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
     height: 100%;
 }
 
@@ -14,7 +19,7 @@ body, html {
     height: 60vh;
     width: 40vh;
     margin: auto;
-    background-color: #E0DECF;
+    background-color: rgba(224,222,207,0.7);
     box-shadow: 17px 17px 27px 1px rgba(0,0,0,0.2),-17px -17px 27px 1px rgba(255,255,255,0.2);
 
 }
@@ -35,8 +40,6 @@ h5, h4, h3, h6, h1, p {
 }
 
 .digit {
-    /* padding: 5px;
-    margin: 2px; */
     color: #868885;
     background-color: #0C0904;
     width: 48px;
@@ -47,7 +50,11 @@ h5, h4, h3, h6, h1, p {
 }
 
 .seconds {
-    display: inline-block;
+    /* display: inline-block; */
+}
+
+.buttonText{
+    margin-top: 4em;
 }
 
 .btn {

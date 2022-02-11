@@ -7,13 +7,11 @@ import "../styles/index.css";
 
 //import your own components
 import Home from "./component/home.jsx";
-import Buttons from "./component/buttons.jsx";
-// import Counter from "./component/Counter.jsx"
 
 //render your react application
 var counter = 0;
 
-setInterval(function () {
+export function start() {
 	const fourth = Math.floor(counter / 1000);
 	const third = Math.floor(counter / 100);
 	const second = Math.floor(counter / 10);
@@ -29,6 +27,12 @@ setInterval(function () {
 		/>,
 		document.querySelector("#app")
 	);
-}, 1000);
+}
 
-ReactDOM.render(<Buttons />, document.querySelector("#buttons"));
+export function reset() {
+	counter = 0;
+
+	start();
+}
+
+start();

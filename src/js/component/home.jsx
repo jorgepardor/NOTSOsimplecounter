@@ -11,7 +11,7 @@ let Home = (props) => {
 	const [stop, setStop] = useState("Play");
 
 	useEffect(() => {
-		if (stop == "Stop") {
+		if (stop == "Play") {
 			console.log("playing");
 			let myInterval = setInterval(() => {
 				start();
@@ -57,69 +57,47 @@ let Home = (props) => {
 				<h3 class="d-flex justify-content-center">БЕЗ ПРОИСШЕСТВИЙ</h3>
 			</div>
 
-			<div>
-				<h3 className="buttonText text-center">ДОСТУПНЫЕ ДЕЙСТВИЯ:</h3>
-				<table className="table-borderless my-3">
-					<tbody>
-						<tr>
-							<td>
-								<p className="text-center">
-									НАЖМИТЕ ТОЛЬКО В СЛУЧАЕ АВАРИИ
-								</p>
-							</td>
-							<td>
-								<p className="text-center">
-									ПРИОСТАНОВИТЬ ПРЕДУПРЕЖДЕНИЯ ДЛЯ
-									ТЕСТИРОВАНИЯ
-								</p>
-							</td>
-						</tr>
-						<tr>
-							<td className="text-center">
-								<button
-									className="btn btn-danger btn-lg"
-									onClick={reset}></button>
-							</td>
-							<td className="text-center">
-								<button
-									className="btn btn-warning btn-lg mx-4"
-									id="stop"
-									onClick={() => {
-										stop == "Play"
-											? (setStop("Stop"),
-											  console.log("cambiado"))
-											: setStop("Play");
-									}}></button>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				;
-				{/* <div className="d-flex justify-content-center my-5">
-					<button
-						className="btn btn-danger btn-lg mx-4"
-						onClick={reset}>
-						Stop
-					</button>
+			<div className="buttondiv">
+				<h3 className="text-center mb-3">ДОСТУПНЫЕ ДЕЙСТВИЯ:</h3>
 
-					<p className="align-self-center text-start">
-						НАЖМИТЕ ТОЛЬКО В СЛУЧАЕ АВАРИИ
-					</p>
-
-					<button
-						className="btn btn-warning btn-lg mx-4"
-						id="stop"
-						onClick={() => {
-							stop == "Play"
-								? (setStop("Stop"), console.log("cambiado"))
-								: setStop("Play");
-						}}>
-						{stop}
-					</button>
-					<p className="align-self-center text-start">
-						ПРИОСТАНОВИТЬ ПРЕДУПРЕЖДЕНИЯ ДЛЯ ТЕСТИРОВАНИЯ
-					</p>
-				</div> */}
+				<nav>
+					<table className="nav">
+						<tbody>
+							<tr>
+								<td>
+									<p className="text-center">
+										НАЖМИТЕ ТОЛЬКО В СЛУЧАЕ АВАРИИ
+									</p>
+								</td>
+								<td>
+									<p className="text-center">
+										ПРИОСТАНОВИТЬ ПРЕДУПРЕЖДЕНИЯ ДЛЯ
+										ТЕСТИРОВАНИЯ
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a
+										href="#"
+										className="icon-cog reset mx-auto"
+										onClick={reset}></a>
+								</td>
+								<td>
+									<a
+										href="#"
+										className="icon-cog pause mx-auto"
+										onClick={() => {
+											stop == "Play"
+												? (setStop("Stop"),
+												  console.log("cambiado"))
+												: setStop("Play");
+										}}></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</nav>
 			</div>
 		</div>
 	);
